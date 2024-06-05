@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_megaman_shot_copy_vision.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.12,
 }

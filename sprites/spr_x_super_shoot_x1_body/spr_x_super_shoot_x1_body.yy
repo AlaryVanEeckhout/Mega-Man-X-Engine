@@ -32,7 +32,7 @@
   "origin": 0,
   "parent": {
     "name": "Body",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Body.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Light/Body.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

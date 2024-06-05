@@ -16,6 +16,7 @@ function audio_init() {
 	//music_load("ChillPenguin");
 	global.music_hidden = noone;
 	global.music_playing_index = noone;
+	global.music_playing_name = ""; // for use with music_play()
 	global.music_streamed_info = [noone, noone, noone];
 	global.music_played_intro = false;
 	// Audio Min Limit to Play

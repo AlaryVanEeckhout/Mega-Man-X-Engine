@@ -1,5 +1,5 @@
 event_inherited();
-shot_level = 4;
+lv = 4;
 atk = 2;
 can_hit = false;
 shot_counted = false;

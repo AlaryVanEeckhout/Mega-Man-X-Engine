@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Arms",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Arms.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Light/Arms.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -57,7 +57,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"da50ed84-a9bf-4a82-9686-eabf7353a2c1","path":"sprites/spr_x_complete_x1_arms/spr_x_complete_x1_arms.yy",},},},"Disabled":false,"id":"9906ba80-3fcb-43e4-9c1c-e21a3441163d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
     "yorigin": 40,

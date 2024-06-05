@@ -1,8 +1,8 @@
 /// @description Add new animation
-/// @param name
-/// @param key_frames
-/// @param loop_start
-/// @param loop_end
+/// @param {String} name
+/// @param {Array} key_frames frames of the anim, grouped by two: first for anim frame and second for image index
+/// @param {Real} loop_start the frame to start on(?)
+/// @param {Real} loop_end the image index that ends anim(?)
 function animation_add() {
 
 	var _name = argument[0];

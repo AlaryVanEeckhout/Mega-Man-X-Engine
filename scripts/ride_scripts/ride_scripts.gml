@@ -130,24 +130,26 @@ function ride_step() {
 		ride_char_pos = other.character_pos;
 		other.move = move;
 		
-		other.key_p_jump = key_p_jump;
-		other.key_jump = key_jump;
+		if variable_instance_exists(self, "key_right"){
+			other.key_p_jump = key_p_jump;
+			other.key_jump = key_jump;
 		
-		other.key_p_left = key_p_left;
-		other.key_p_right = key_p_right;
-		other.key_p_up = key_p_up;
-		other.key_p_down = key_p_down;
+			other.key_p_left = key_p_left;
+			other.key_p_right = key_p_right;
+			other.key_p_up = key_p_up;
+			other.key_p_down = key_p_down;
 		
-		other.key_left = key_left;
-		other.key_right = key_right;
-		other.key_up = key_up;
-		other.key_down = key_down;
+			other.key_left = key_left;
+			other.key_right = key_right;
+			other.key_up = key_up;
+			other.key_down = key_down;
 		
-		other.key_p_dash = key_p_dash;
-		other.key_dash = key_dash;
+			other.key_p_dash = key_p_dash;
+			other.key_dash = key_dash;
 		
-		other.key_p_shoot = key_p_shoot;
-		other.key_shoot = key_shoot;
+			other.key_p_shoot = key_p_shoot;
+			other.key_shoot = key_shoot;
+		}
 		visible = true;
 	}
 	sprite = map_sprites[? animation_sprite_name];
@@ -275,7 +277,7 @@ function ride_check_punch() {
 /// @function		ride_check_leave()
 /// @description	Leave the Ride Armor/Chaser
 function ride_check_leave() {
-	if (key_up && key_p_jump && state != RIDE_ARMOR_STATE.ACTIVATED) {
+	if (((key_up && key_p_jump) || obj_player_parent.teleport_outro || obj_player_parent.wait_state == states.outro) && state != RIDE_ARMOR_STATE.ACTIVATED) {
 		state_set(RIDE_ARMOR_STATE.DEACTIVATING, 0, [is_on_floor()]);
 		with (char_instance) {
 			state_set(states.jump);	

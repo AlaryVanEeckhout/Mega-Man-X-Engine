@@ -26,7 +26,7 @@
   "origin": 9,
   "parent": {
     "name": "Weapons",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X4 Ultimate/Weapons.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X4/Ultimate/Weapons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -91,6 +91,8 @@ function boss_death_x1() {
 	}
 	if (t == 507) {
 		with (obj_player_parent) {
+			if variable_instance_exists(self, "is_x")
+				audio_play(voice_x_complete);
 			walking_to_x = !other.skip_complete_walk;
 			dest_x = obj_camera_rds.mid_x;
 			boss_complete_music = "BossDefeated";

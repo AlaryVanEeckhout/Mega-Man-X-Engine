@@ -33,7 +33,7 @@
   "origin": 9,
   "parent": {
     "name": "Weapons",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Weapons.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Weapons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

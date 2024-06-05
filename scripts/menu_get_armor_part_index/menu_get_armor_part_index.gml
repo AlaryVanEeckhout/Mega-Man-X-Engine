@@ -1,3 +1,5 @@
+///@Description associate armor buttons with armor macros
+///@param {Real} button pl_btn
 function menu_get_armor_part_index() {
 	switch (argument[0]) {
 		case pl_btn.helmet: return P_HELM;

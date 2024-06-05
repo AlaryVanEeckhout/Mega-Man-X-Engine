@@ -1,2 +1,2 @@
-camera_id = 1;
+camera_id = 2;
 lock_right = true;

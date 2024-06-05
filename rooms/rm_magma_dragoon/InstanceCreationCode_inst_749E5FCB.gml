@@ -1,2 +1,2 @@
-camera_id = 2;
+camera_id = 3;
 boss_door = true;

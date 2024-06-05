@@ -39,4 +39,5 @@ function music_play(music_name = "") {
 	// Play Music
 	global.music_playing_index = audio_play_sound(snd, 0, _loop);
 	audio_sound_gain(global.music_playing_index, global.bgm_volume, 0);
+	global.music_playing_name = music_name; // store name used to call music in global var so it can be accessed anywhere
 }

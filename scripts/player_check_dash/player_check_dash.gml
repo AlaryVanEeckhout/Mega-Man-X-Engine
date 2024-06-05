@@ -1,3 +1,4 @@
+///@Description Handle transition to dash state
 function player_check_dash() {
 	if (state_unlocked[states.dash]) {
 	    // Double Tap

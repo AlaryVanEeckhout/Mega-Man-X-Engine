@@ -1,3 +1,6 @@
+///@Description Does nothing
+///
+/// Use music_play() instead
 function music_load() {
 	// File Name
 	/*

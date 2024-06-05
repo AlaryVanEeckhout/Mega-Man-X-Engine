@@ -1,4 +1,5 @@
-/// @param refresh_variables
+///@Description Used when receiving an armor from capsule
+/// @param {Bool} refresh_variables
 function player_check_armor() {
 	var _refresh = false;
 	if (argument_count > 0) _refresh = argument[0];

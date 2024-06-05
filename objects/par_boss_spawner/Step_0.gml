@@ -7,12 +7,22 @@ if (spawn) {
 		}
 		if (timer > t_limit) {
 			if (walk_to_x != infinity && abs(walk_to_x - player_inst.x) >= 1) {
-				if (!player_inst.walking_to_x && player_inst.state == states.idle) {
+				var _on_floor;
+				with (player_inst){
+					_on_floor = is_on_floor();
+				}
+				if (!player_inst.walking_to_x && _on_floor) {
 					player_inst.walking_to_x = true;
 					player_inst.dest_x = walk_to_x;
 					player_inst.animation = "";
-					with (player_inst) {
-						animation_play("walk", 0);	
+					if player_inst.state != states.ride{
+						with (player_inst) {
+							animation_play("walk", 0);
+						}
+					} else{
+						with instance_nearest(player_inst.x, player_inst.y, par_ride_armor){
+							animation_play("walk", 0);
+						}
 					}
 				}
 			}
@@ -22,7 +32,9 @@ if (spawn) {
 	} else {
 		if (timer > t_limit) {
 			if (boss_object != noone) {
-				if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1) {
+				log("walk_to_x : x")
+				log(string(walk_to_x) + " : "+ string(player_inst.x))
+				if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1 || player_inst.state == states.ride && abs(walk_to_x - player_inst.x) < 2) {
 					var inst = instance_create_depth(x, y, depth - 10, boss_object);
 					with (inst) {
 						event_perform(ev_step, ev_step_normal);	
@@ -30,7 +42,7 @@ if (spawn) {
 					spawn = false;
 				}
 			}
-			if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1) {
+			if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1 || player_inst.state == states.ride && abs(walk_to_x - player_inst.x) < 2) {
 				spawn = false;
 				instance_destroy();
 			}

@@ -7,7 +7,7 @@
   "option_windows_company_info": "MMXE Team",
   "option_windows_copy_exe_to_dest": false,
   "option_windows_copyright_info": "Capcom",
-  "option_windows_description_info": "MMXE",
+  "option_windows_description_info": "A game based on MMXE",
   "option_windows_disable_sandbox": true,
   "option_windows_display_cursor": true,
   "option_windows_display_name": "Mega Man X Engine",
@@ -29,6 +29,6 @@
   "option_windows_steam_use_alternative_launcher": false,
   "option_windows_texture_page": "2048x2048",
   "option_windows_use_splash": false,
-  "option_windows_version": "1.2.1.6",
+  "option_windows_version": "1.2.1.7",
   "option_windows_vsync": false,
 }

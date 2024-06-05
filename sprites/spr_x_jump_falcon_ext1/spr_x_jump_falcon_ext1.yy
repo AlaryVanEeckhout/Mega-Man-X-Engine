@@ -32,7 +32,7 @@
   "origin": 9,
   "parent": {
     "name": "Ext1",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Ext1.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Ext1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

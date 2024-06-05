@@ -2,11 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_player_zero_shot_nightmare_charge",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
-  ],
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -14,8 +10,8 @@
     "path": "folders/Objects/Players/Characters/Zero/Shots/Nightmare.yy",
   },
   "parentObjectId": {
-    "name": "obj_player_effect_parent",
-    "path": "objects/obj_player_effect_parent/obj_player_effect_parent.yy",
+    "name": "obj_player_zero_shot_x5_charge",
+    "path": "objects/obj_player_zero_shot_x5_charge/obj_player_zero_shot_x5_charge.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

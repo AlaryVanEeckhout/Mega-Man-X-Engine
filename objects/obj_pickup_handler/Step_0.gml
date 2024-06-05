@@ -88,6 +88,17 @@ if (t >= min_limit && (t mod time_per_unit == 0)) {
 				amount = 0;
 			}
 			break;
+		case pickup_types.dna_core:
+			log("dna_core Aquired");
+			// set the pontential body as the available A-Trans body
+			target.a_trans_body = target.a_trans_body_new
+			// reset variable
+			target.a_trans_body_new = obj_player_parent
+			// allow A-Trans
+			state_unlocked[states.a_trans] = true;
+			audio_play(snd_megaman_speed_gear_end);
+			amount = 0;
+			break;
 	}
 	amount--;
 	

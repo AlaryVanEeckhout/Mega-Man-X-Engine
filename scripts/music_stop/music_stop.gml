@@ -1,3 +1,5 @@
+///@Description Stops current music if applicable
+///@param {Real} _timer how many milliseconds befor music fully gone
 function music_stop() {
 	if (global.music_playing_index == noone) exit;
 	var _timer = (argument_count > 0 ? argument[0] : 0);

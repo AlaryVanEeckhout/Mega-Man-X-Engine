@@ -16,9 +16,9 @@ function player_x_buster_x8(lvl = -1, t) {
 		break;
 		// Fully-Charged shot
 		case 2:
-			player_shoot_projectile(obj_player_x_shot_x2_3);
+			player_shoot_projectile(obj_player_x_shot_x1_3);
 		break;
-		// Super-Charged shot
+		// Ultimate-Charged shot
 		case 3:
 			player_shoot_projectile(obj_player_x_shot_x8_ult);
 			player_super_shoot_animation();

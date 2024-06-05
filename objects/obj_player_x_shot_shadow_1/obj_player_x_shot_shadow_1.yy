@@ -31,7 +31,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_x_shot_shadow",
+    "path": "sprites/spr_x_shot_shadow/spr_x_shot_shadow.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -1,3 +1,4 @@
+///@ param {Array} view_area
 function is_inside_view() {
 	var rect = [];
 	rect[0] = x - sprite_xoffset;//*dir;

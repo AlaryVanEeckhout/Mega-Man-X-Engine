@@ -1,3 +1,6 @@
+///@Description Sets armor_order_map(how armor parts are layered) in consequence of current animation.
+///
+///Goes from first element (under everything) to last (over everything).
 function player_armor_order() {
 	// Default Order
 	armor_order_map[? ""] = [0, 1, 2, 3, 4, 5];

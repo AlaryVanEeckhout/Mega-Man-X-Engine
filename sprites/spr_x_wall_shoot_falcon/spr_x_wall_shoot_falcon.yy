@@ -30,7 +30,7 @@
   "origin": 9,
   "parent": {
     "name": "Full",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Full.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Full.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

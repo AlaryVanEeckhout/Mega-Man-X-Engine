@@ -1,3 +1,4 @@
+///@Description Change button color if selected or armor equipped
 function menu_armor_update_colors() {
 	for (var i = 0; i <= pl_btn.confirm; i++) {
 		item_image_index[i] = 1;	

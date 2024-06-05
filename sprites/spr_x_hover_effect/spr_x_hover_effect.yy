@@ -40,7 +40,7 @@
   "origin": 9,
   "parent": {
     "name": "Effects",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X4 Ultimate/Effects.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X4/Ultimate/Effects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

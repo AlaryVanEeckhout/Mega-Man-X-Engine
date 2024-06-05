@@ -40,7 +40,7 @@ function player_x_buster_shadow(lvl = -1, t = 0) {
 				shot_angle = 0;
 			}
 		break;
-		// Semi-Charged shot
+		// Charged shot
 		case 1:
 		case 2:
 		case 3:
@@ -54,6 +54,22 @@ function player_x_buster_shadow(lvl = -1, t = 0) {
 					player_shoot_projectile(obj_player_x_shot_shadow_1);
 				}
 				shots_count -= 2;
+			} else
+			{
+				shoot_next_animation = "ceil_shot";
+				shoot_next_type = shoot_types.ceil_cling;
+				shoot_limit = 24;
+			
+				animation = "";
+				animation_play("ceil_shot");
+				for (var i = 0; i < 3; i++)
+				{
+					shot_current_angle_index = i;
+					shot_angle = angles[shot_current_angle_index] - 90;
+					player_shoot_projectile(obj_player_x_shot_shadow_1);
+				}
+				shots_count -= 2;
+				shot_angle = 0;
 			}
 		break;
 		/*

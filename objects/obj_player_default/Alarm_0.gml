@@ -23,7 +23,9 @@ for (var i = 0, len = array_length(global.checkpoint_phase); i < len; i++) {
 	check_phase = global.checkpoint_phase[i];
 	with (obj_background_area) {
 		if (phase == other.check_phase) {
-			var bg_info = global.background_list[| i][| phase];
+			var bg_info = asset_get_index(string_replace(room_get_name(room), "rm", "bg") + "_" + string(phase)); // failsafe against weird crash
+			if not is_undefined(global.background_list[| i][| phase])
+				bg_info = global.background_list[| i][| phase];
 			obj_camera_rds.background_object[i] = self;
 			obj_camera_rds.background_far[i] = bg_info.far;
 			layer_background_sprite(

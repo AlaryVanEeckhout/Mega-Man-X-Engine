@@ -1,3 +1,4 @@
+///@Description menu_button_inside(button) Determines whether or not mouse cursor is in a sprite
 function menu_button_inside() {
 	var b = argument[0];
 	var w = sprite_get_width(b[0]),

@@ -1,4 +1,6 @@
-/// @param refresh_variables
+///@Description Load appropriate armor in-stage
+///@param {Bool} refresh_variables
+///@return {Bool}
 function player_load_armor() {
 	var _refresh = false;
 	if (argument_count > 0) _refresh = argument[0];

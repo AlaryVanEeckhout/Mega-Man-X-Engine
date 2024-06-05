@@ -45,7 +45,7 @@
   "origin": 9,
   "parent": {
     "name": "Effects",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Effects.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Effects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -67,6 +67,21 @@ function player_special_weapon_from_state(wp_state) {
 				check: player_check_teleport_dash,
 				scr: player_state_teleport_dash
 			};
+		case states.z_buster_x5:
+			return {
+				check: player_check_z_buster,
+				scr: player_state_z_buster_nightmare
+			};
+		case states.a_copy_shot:
+			return {
+				check: player_check_a_copy_shot,
+				scr: player_state_a_copy_shot
+			};
+		case states.a_trans:
+			return {
+				check: player_check_a_trans,
+				scr: player_state_a_trans
+			};
 		default:
 			return {};
 	}

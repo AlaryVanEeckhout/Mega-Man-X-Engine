@@ -25,6 +25,8 @@ function player_zero_armors() {
 		ds_list_clear(special_weapons);
 		dash_dust.y += 5;
 		dash_speed = 4;
+		dash_air_unlocked = false;
+		double_jump_unlocked = false;
 		saber_unlocked = false;
 		shoot_unlocked = true;
 		charge_unlocked = true;

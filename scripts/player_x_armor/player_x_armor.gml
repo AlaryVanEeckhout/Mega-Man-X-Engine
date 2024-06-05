@@ -30,6 +30,12 @@ function player_x_armor() {
 			charge_level_max = 3;
 			weapons_script[weapons.x_buster] = player_x_buster_x1;	
 		}
+		if (ARMS == "x1_z") {
+			// Z-Buster
+			charge_level_max = 3;
+			charge_limits[3] = charge_limits[2];
+			weapons_script[weapons.x_buster] = player_zero_buster_x1;
+		}
 	#endregion
 	#region X2 - Giga Armor
 		if (armor_is_full("x2")) {	
@@ -105,6 +111,13 @@ function player_x_armor() {
 			dash_air_unlocked = true;
 			// Hover
 			state_unlocked[states.hover] = true;
+		}
+		if (ARMS == "x4") {
+			// X-Buster
+			charge_speed = 0.5;
+			charge_level_max = 3;
+			charge_limits[3] = charge_limits[2];
+			weapons_script[weapons.x_buster] = player_x_buster_x4_stack;	
 		}
 		if (ARMS == "x4_1") {
 			// X-Buster
@@ -186,6 +199,7 @@ function player_x_armor() {
 			// Saber
 			saber_unlocked = true;
 			saber_atk_unlocked[saber_atks.atk2] = false;
+			saber_atk_unlocked[saber_atks.atk3] = false;
 			//saber_atk_unlocked[saber_atks.jump] = false;
 			saber_atk_unlocked[saber_atks.wall] = false;
 			saber_atk_animations[saber_atks.atk1] = "atk3";
@@ -253,14 +267,50 @@ function player_x_armor() {
 	#endregion
 	#region Hermes
 		if (armor_is_full("hermes")) {
+			charge_level_max += 1;
+			charge_speed += 1
 			glow_enabled = true;
 			glow_on_light = true;
+		}
+		if (ARMS == "hermes") {
+			charge_level_max += 1;
+			charge_speed += 1
+			weapons_script[weapons.x_buster] = player_x_buster_x8_hermes;
+		}
+		if (LEGS == "hermes") {
+			dash_speed = 4;
+			dash_air_unlocked = true;
+			dash_immunity = true;
+			dash_air_immunity = true;
+			dash_air_blink = true;
+			dash_blink = true;
 		}
 	#endregion
 	#region Icarus
 		if (armor_is_full("icarus")) {
 			glow_enabled = true;
 			glow_on_light = true;
+			player_weapon_set(8, weapons.x2_giga_crush);
+			player_special_weapons_add(states.giga_crush);
+		}
+		if (BODY == "icarus") {
+			dolor_animation = "";
+		}
+		if (ARMS == "icarus") {
+			charge_level_max = 3;
+			weapons_script[weapons.x_buster] = player_x_buster_x8_icarus;
+		}
+		if (LEGS == "icarus") {
+			dash_air_unlocked = true;
+			wall_jump_strength = 7;
+			jump_strength = 7;
+		}
+	#endregion
+	#region Neutral Armor
+		if (ARMS == "neutral") {
+			dash_air_unlocked = true;
+			charge_level_max = 3;
+			weapons_script[weapons.x_buster] = player_x_buster_x8;
 		}
 	#endregion
 	#region MMXC - Phoenix Armor
@@ -281,7 +331,13 @@ function player_x_armor() {
 	#region Command Mission
 		if (FULL == "cm") {
 			dash_air_unlocked = true;
+			dash_normal_length = 26;
+			//dash_dust.object = obj_player_x_fly_falcon;
 			dolor_animation = "dolor";
+			
+			charge_speed = 0.5;
+			charge_level_max = 4;
+			weapons_script[weapons.x_buster] = player_x_buster_cm;
 		}
 	#endregion
 

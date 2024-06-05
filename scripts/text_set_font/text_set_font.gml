@@ -1,3 +1,4 @@
+///@param {Real} index text_fonts.font
 function text_set_font() {
 	var fnt = argument[0];
 	if (fnt != text_fonts.custom)

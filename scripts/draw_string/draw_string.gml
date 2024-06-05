@@ -1,8 +1,8 @@
-/// @description - Draw String on Screen
-/// @param x
-/// @param y
-/// @param string
-/// @param _color
+/// @description - Draw String on Screen using game font
+/// @param {Real} x
+/// @param {Real} y
+/// @param {String} _text
+/// @param {Real} _color
 function draw_string() {
 
 	enum colors

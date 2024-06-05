@@ -11,7 +11,7 @@ switch(state) {
 			animation_play("O");
 			audio_play(snd_door_default);
 			if (boss_door) {
-				music_stop(2900);	
+				music_stop(2900);	// fade out for 2.9 seconds
 			}
 			with (obj_player_shot_parent) {
 				instance_destroy();	
@@ -19,7 +19,6 @@ switch(state) {
 			with (target) {
 				shots_count = 0;
 				charged_shots_count = 0;
-				visible = true;
 			}
 			
 			pause_set(true, pause_types.door);
@@ -34,9 +33,23 @@ switch(state) {
 		} else {
 			global.current_camera = camera_id;
 			if (is_vertical) {
-				target.y += 72 / 116 * dir;	
+				target.y += 72 / 116 * dir;
+				if target.state == states.ride{
+					if target.x != (bbox_left + bbox_right)/2{
+						target.ride_char_pos.x += (bbox_left + bbox_right)/2 - target.x;
+						target.x = (bbox_left + bbox_right)/2; // center of door
+					}
+					var _addy = 1;
+					target.y += _addy * dir; // if in ride fall faster to not get stuck in door
+					target.ride_char_pos.y += (_addy + 72 / 116) * dir; // make the char in ride follow ride properly
+				}
 			} else {
 				target.x += 56 / 116 * dir;
+				if target.state == states.ride{
+					var _addx = 0.25;
+					target.x += _addx * dir; // if in ride walk faster to not get stuck in door
+					target.ride_char_pos.x += (_addx + 56 / 116) * dir; // make the char in ride follow ride properly
+				}
 			}
 			event_user(0); // Player animation
 		}
@@ -79,11 +92,15 @@ switch(state) {
 				}
 				if (instance_exists(boss_inst)) {
 					boss_inst.spawn = true;
-				} else {
+				} else { // if there is no boss in the boss room when entering
 					with (target) {
 						//state_set(states.idle, 0, [-1]); // Set idle but wait for the next state
-						substates[0] = -1;
 						wait_state = states.outro;
+						if state == states.ride{
+							with ride_inst
+								ride_check_leave();
+						}
+						substates[0] = -1;
 						wait_state_limit = 60;
 						immortal = true;
 					}

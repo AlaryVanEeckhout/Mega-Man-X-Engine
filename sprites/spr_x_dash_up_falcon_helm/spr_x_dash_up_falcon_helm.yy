@@ -32,7 +32,7 @@
   "origin": 0,
   "parent": {
     "name": "Helm",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Helm.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Helm.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

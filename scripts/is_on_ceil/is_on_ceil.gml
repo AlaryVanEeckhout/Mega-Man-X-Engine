@@ -1,3 +1,4 @@
+/// @Description Checks for collision above calling instance (ceiling)
 function is_on_ceil() {
 	var _height = 1;
 

@@ -13,6 +13,7 @@ function player_global_voices_init() {
 	global.state_voice_name[states.hadouken] = "hadouken";
 	global.state_voice_name[states.shoryuken] = "shoryuken";
 	global.state_voice_name[states.death] = "death";
+	global.state_voice_name[states.complete] = "complete";
 #endregion
 #region Voice Settings
 	global.voice_language = "SNES";

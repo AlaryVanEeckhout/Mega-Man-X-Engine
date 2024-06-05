@@ -35,7 +35,7 @@ function global_values() {
 	global.unlocked_points = 0;
 	global.golden_armor_enabled = false;
 	global.tile_shader_multiplier = 1;
-	global.anyone_can_get_armors = 1;
+	global.anyone_can_get_armors = 0;
 	
 	enum diff_modes {
 		easy,
@@ -74,9 +74,10 @@ function global_values() {
 	global.character_selected[0] = obj_player_x;
 	global.pickup_lifeup_sprite = spr_x_pickup_lifeup;
 	global.transition_object_list = ds_list_create();
+	// for each character
 	for (var i = 0; i < pl_char.length; i++) {
-		global.player_character_armor[i] = ["", "", "", "", "", ""];
-		global.player_character_armor_index[i] = [0, 0, 0, 0, 0, 0];
+		global.player_character_armor[i] = ["", "", "", "", "", ""]; // array containing a character's (internal)name for armor part
+		global.player_character_armor_index[i] = [0, 0, 0, 0, 0, 0]; // array containing same as above, but with indexes(?)
 	}
 	draw_set_circle_precision(64);
 	//global.run_from_ide = !global.mobile && parameter_count() == 3 && string_count("GMS2TEMP", parameter_string(2));

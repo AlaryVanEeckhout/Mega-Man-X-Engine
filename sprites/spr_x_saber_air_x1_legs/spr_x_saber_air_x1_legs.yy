@@ -36,7 +36,7 @@
   "origin": 9,
   "parent": {
     "name": "Legs",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Legs.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Light/Legs.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

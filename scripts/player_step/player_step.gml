@@ -90,8 +90,16 @@ function player_step() {
 	move = key_right - key_left;
 	// Walk to the middle of the screen
 	if (walking_to_x) {
-		if (state != states.walk)
+		if (state != states.walk && state != states.ride)
 			state_set(states.walk);
+		else if state == states.ride{
+			with instance_nearest(x, y, par_ride_armor){
+				if state != RIDE_ARMOR_STATE.CHARGED_PUNCH
+					state_set(RIDE_ARMOR_STATE.WALK);
+				else
+					state_set(RIDE_ARMOR_STATE.DASH);
+			}
+		}
 		if (dest_x > x)
 			move = 1;
 		else if (dest_x < x)
@@ -122,13 +130,13 @@ function player_step() {
 		glow_timer++;
 	}
 	player_check_weapon_change();
+	player_door_check();
 	if (state != states.ride) {
+		player_saber_check();
 		player_gravity();
 		script_try(state_array[state]);
-		player_saber_check();
 		player_immunity();
 		player_collision();
-		player_door_check();
 		special_input_update();
 		if (state == states.death) exit;
 

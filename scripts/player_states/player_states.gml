@@ -43,6 +43,8 @@ function player_states() {
 		z_buster_x5,
 		z_buster_nightmare,
 		teleport_dash,
+		a_copy_shot,
+		a_trans,
 		// Weapons
 		db_buster,
 		x3_saber,
@@ -100,11 +102,11 @@ function player_states() {
 	
 
 	// Special State Scripts
-	state_array[states.hover]         = player_state_hover;
-	state_array[states.ceil_cling]    = player_state_ceil_cling;
-	state_array[states.glide]         = player_state_glide;
-	state_array[states.fly]           = player_state_fly;
-	state_array[states.dodge_roll]    = player_state_dodge_roll;
+	state_array[states.hover]        = player_state_hover;
+	state_array[states.ceil_cling]   = player_state_ceil_cling;
+	state_array[states.glide]        = player_state_glide;
+	state_array[states.fly]          = player_state_fly;
+	state_array[states.dodge_roll]   = player_state_dodge_roll;
 
 	// Special Attack States
 	state_array[states.nova_strike]		= player_state_nova_strike;
@@ -112,13 +114,13 @@ function player_states() {
 	state_array[states.shoryuken]		= player_state_shoryuken;
 	state_array[states.tatsumaki]		= player_state_tatsumaki;
 	state_array[states.giga_falcon]		= player_state_giga_falcon;
+	state_array[states.teleport_dash]		= player_state_teleport_dash;
 	state_array[states.messenko]		= player_state_messenko;
 	state_array[states.shin_messenko]	= player_state_shin_messenko;
 	state_array[states.dive_kick]		= player_state_dive_kick;
 	state_array[states.z_buster_x5]		= player_state_z_buster_x5;
 	state_array[states.z_buster_nightmare]	= player_state_z_buster_nightmare;
-	state_array[states.teleport_dash]		= player_state_teleport_dash;
-	
+
 	// Weapons
 	state_array[states.db_buster]		= player_state_db_buster;
 	state_array[states.x3_saber]		= player_state_x3_saber;
@@ -137,7 +139,7 @@ function player_states() {
 	state_array[states.saber_up]              = player_state_saber_up;
 	state_array[states.saber_down]            = player_state_saber_down;
 	state_array[states.saber_dash]            = player_state_saber_dash;
-	state_array[states.saber_raikousen]       = player_state_saber_raikousen;
 	state_array[states.saber_genmu]			  = player_state_saber_genmu;
+	state_array[states.saber_raikousen]       = player_state_saber_raikousen;
 
 }

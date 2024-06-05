@@ -6,7 +6,8 @@ enum pickup_types {
 	wp,
 	subtank,
 	energytank,
-	lifeup
+	lifeup, 
+	dna_core
 }
 wait_timer = 0;
 timer = 0;

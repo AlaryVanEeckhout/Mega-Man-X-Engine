@@ -27,7 +27,7 @@
   "origin": 9,
   "parent": {
     "name": "Arms",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Arms.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Light/Arms.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

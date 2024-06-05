@@ -30,7 +30,7 @@
   "origin": 0,
   "parent": {
     "name": "Full",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X4 Ultimate/Full.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X4/Ultimate/Full.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

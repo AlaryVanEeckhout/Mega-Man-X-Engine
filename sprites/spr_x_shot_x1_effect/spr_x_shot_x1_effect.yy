@@ -31,7 +31,7 @@
   "origin": 9,
   "parent": {
     "name": "Weapons",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Weapons.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X1/Light/Weapons.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -67,7 +67,7 @@
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c942eca1-aa7e-4508-a557-4182b6ccc2a4","path":"sprites/spr_x_shot_x1_effect/spr_x_shot_x1_effect.yy",},},},"Disabled":false,"id":"cfacd720-6459-46f9-a673-fc8ba695e581","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "volume": 1.0,
     "xorigin": 53,
     "yorigin": 35,

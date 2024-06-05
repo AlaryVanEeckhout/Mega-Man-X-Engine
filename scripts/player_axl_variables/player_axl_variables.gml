@@ -31,6 +31,10 @@ function player_axl_variables() {
 	player_weapon_set(0, weapons.a_pistol);
 	player_weapon_set(1, weapons.a_ray_gun);
 	player_weapon_select(weapons.a_pistol);
+	player_weapon_set(9, weapons.a_copy_shot);
+	player_special_weapons_add(states.a_copy_shot);
+	state_unlocked[states.a_trans] = false;
+	player_special_weapons_add(states.a_trans);
 	weapon_hold_mode = true;
 	crouch_unlocked = false;
 	weapon_allow_pallete = false;

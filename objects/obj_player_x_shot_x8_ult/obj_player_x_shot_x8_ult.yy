@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "X8 Ultimate",
-    "path": "folders/Objects/Players/Characters/X/Shots/X Buster/X8 Ultimate.yy",
+    "name": "X8",
+    "path": "folders/Objects/Players/Characters/X/Shots/X Buster/X8.yy",
   },
   "parentObjectId": {
     "name": "obj_player_x_shot_ult_super",

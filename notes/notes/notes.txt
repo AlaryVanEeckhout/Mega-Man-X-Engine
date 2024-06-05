@@ -11,3 +11,25 @@ Add weapon script Player/Characters/[char]/Weapons/player_[char]_[weapon]
 
 Live code editing check:
 if (live_call()) return live_result;
+
+
+Additionnal Notes:
+
+Search stuff with Ctrl + Shift + F
+
+Custom description for function?
+///@function fun(arg0, arg1);
+///@tag description content
+///
+/// text from new line here
+///@param {type} parameter_name parameter description
+///@return {type}
+
+Where are audio global variables defined?
+Go to script Utils/Audio/audio_init
+
+How to add special weapons?
+Go to script Player/Base/Create/player_states
+
+How to mod states?
+Go to script Player/Base/Step/States/[Normal or Special] States/player_state_[name]

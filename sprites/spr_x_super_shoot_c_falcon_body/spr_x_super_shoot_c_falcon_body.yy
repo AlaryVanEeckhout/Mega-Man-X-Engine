@@ -31,7 +31,7 @@
   "origin": 9,
   "parent": {
     "name": "Body",
-    "path": "folders/Sprites/Player/Characters/X/Armors/X5 Falcon/Body.yy",
+    "path": "folders/Sprites/Player/Characters/X/Armors/X5/Falcon/Body.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -3,7 +3,7 @@ function scr_keys_update() {
 	if (global.running_replay) exit;
 	if (os_type != os_android) {
 		if (global.settings[1] == input_types.keyboard) {
-			key_p_left = (!key_left && keyboard_check(global.key_left));
+			key_p_left = (!key_left && keyboard_check(global.key_left));// p for previous (frame)
 			key_left = keyboard_check(global.key_left);
 
 			key_p_right = (!key_right && keyboard_check(global.key_right));

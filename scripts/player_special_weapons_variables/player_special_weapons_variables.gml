@@ -86,6 +86,13 @@ function player_special_weapons_variables() {
 	teleport_dash_speed = 5;
 	teleport_dash_start = 9;
 	teleport_dash_end = 9;
+	// Copy Shot
+	a_copy_shot_inst = noone;
+	
+	// A-Trans
+	a_trans = false;
+	a_trans_body = obj_player_parent;
+	a_trans_body_new = obj_player_parent;
 	
 	// All
 	using_special_weapon = false;

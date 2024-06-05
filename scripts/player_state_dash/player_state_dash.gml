@@ -158,6 +158,8 @@ function player_state_dash() {
 		    dash_tapped = false;
 		    dash_tap = false;
 			y_dir = 1;
+			if saber_unlocked
+				saber_atk_unlocked[saber_atks.jump] = true;
 		
 			player_state_set(states.idle, 0);
 			animation_play("idle", 0);
@@ -186,6 +188,8 @@ function player_state_dash() {
 		dash_spark_inst = player_effect_destroy(dash_spark_inst);
 		dash_tapped = false;
 		y_dir = 1;
+		if saber_unlocked
+				saber_atk_unlocked[saber_atks.jump] = true;
 		if (key_down && crouch_unlocked)
 			state_hitbox_current = state_hitbox[states.crouch];
 	}

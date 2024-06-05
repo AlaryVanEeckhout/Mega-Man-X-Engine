@@ -1,6 +1,8 @@
+///@Description Load CSS sprites accordingly to selected armor
 function menu_player_select_sprites_load() {
 	//G.player_select_sprite[pl_char.x, x_armor.none]
 	// For each character
+	var armors_unique_full = ["hermes", "icarus"];
 	for (var c = 0; c < pl_char.length; c++) {
 		var character_name = G.character_name[c];
 		if (c < array_length(G.character_armor)) {
@@ -15,6 +17,9 @@ function menu_player_select_sprites_load() {
 				var _sprite_name = "spr_player_" + character_name;
 				if (i != 0) {
 					_sprite_name += "_" + armors[i];
+					if (armor_is_full(armors[i]) && array_contains(armors_unique_full, armors[i])){ // Change to full armor sprite if all parts equiped
+							_sprite_name += "_full";
+					}
 				}
 				asset_index = asset_get_index(_sprite_name);
 				if (asset_index == -1)

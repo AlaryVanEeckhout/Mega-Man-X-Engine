@@ -250,6 +250,7 @@ switch (state) {
 	#endregion
 	#region Armor Select
 	case menu_states.armor_select:
+		menu_player_select_sprites_load();
 		var c = G.character_selected_index[0];
 		if (substates[0] == 0) {
 			var t_dir = -1, next_item = -1;

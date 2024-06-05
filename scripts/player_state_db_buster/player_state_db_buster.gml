@@ -5,6 +5,7 @@ function player_state_db_buster() {
 
 	player_effects_reset();
 	shoot_wait = true;
+	charge_enabled = false;
 	// 0 = Right Hand, 1 = Left Hand
 	if (substates[0] == 1) _n = "_2";
 
@@ -50,6 +51,7 @@ function player_state_db_buster() {
 	if (state != states.db_buster) {
 		shoot = false;
 		shoot_wait = false;
+		charge_enabled = true;
 	}
 
 	// Shoot

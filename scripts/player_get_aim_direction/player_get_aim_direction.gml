@@ -1,3 +1,4 @@
+///@Description Get index of direction in which you would be shooting based on directionnal inputs
 function player_get_aim_direction() {
 	var k = 0;
 	y_result = key_down - key_up;

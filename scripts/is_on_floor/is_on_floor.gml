@@ -1,3 +1,6 @@
+///@Description Checks for collision block for a given "height" under calling instance
+///@param height
+///@return {Bool}
 function is_on_floor() {
 	var _height = 1;
 

@@ -15,3 +15,9 @@ if(armor_check)
 
 G.player_x = x;
 G.player_y = y;
+if state == states.ride{
+	with ride_inst{
+		x = G.player_x;
+		y = G.player_y;
+	}
+}
