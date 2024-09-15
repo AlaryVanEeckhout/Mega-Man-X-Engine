@@ -9,9 +9,9 @@ lines[0] = {
 	start: 0
 }
 lines[1] = {
-	text: "HOMING TORPEDO",
+	text: global.weapon_get_name,
 	text_draw: "",
-	color: colors.pink,
+	color:  colors.gray,
 	x: 16,
 	y: 48,
 	start: 210

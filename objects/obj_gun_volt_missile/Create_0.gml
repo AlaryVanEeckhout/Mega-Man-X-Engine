@@ -5,7 +5,7 @@ collide_damage = 3;
 abs_hspeed = 3;
 phy_type = phy_types.NEW;
 through_walls = true;
-audio_play(missileshot);
+audio_play(snd_missileshot);
 // Smoke
 smoke_object = obj_gun_volt_smoke;
 smoke_limit = 4;

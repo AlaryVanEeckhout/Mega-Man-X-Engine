@@ -2,7 +2,7 @@
 function menu_player_select_sprites_load() {
 	//G.player_select_sprite[pl_char.x, x_armor.none]
 	// For each character
-	var armors_unique_full = ["hermes", "icarus"];
+	var armors_unique_full = ["hermes", "icarus"]; // armors that have unique looks when full
 	for (var c = 0; c < pl_char.length; c++) {
 		var character_name = G.character_name[c];
 		if (c < array_length(G.character_armor)) {

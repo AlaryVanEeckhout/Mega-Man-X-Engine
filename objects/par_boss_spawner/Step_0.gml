@@ -32,8 +32,8 @@ if (spawn) {
 	} else {
 		if (timer > t_limit) {
 			if (boss_object != noone) {
-				log("walk_to_x : x")
-				log(string(walk_to_x) + " : "+ string(player_inst.x))
+				show_debug_message("walk_to_x : x")
+				show_debug_message(string(walk_to_x) + " : "+ string(player_inst.x))
 				if (walk_to_x == infinity || abs(walk_to_x - player_inst.x) < 1 || player_inst.state == states.ride && abs(walk_to_x - player_inst.x) < 2) {
 					var inst = instance_create_depth(x, y, depth - 10, boss_object);
 					with (inst) {

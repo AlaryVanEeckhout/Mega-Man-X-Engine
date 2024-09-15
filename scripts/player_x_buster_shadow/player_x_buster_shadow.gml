@@ -4,6 +4,7 @@ function player_x_buster_shadow(lvl = -1, t = 0) {
 	shoot_animation = "";
 	shoot_next_projectile = noone;
 	shoot_type = shoot_types.normal;
+	saber_unlocked = false;
 
 	if (ceil_cling)
 	{
@@ -147,6 +148,7 @@ function player_x_buster_shadow(lvl = -1, t = 0) {
 		break;*/
 	
 	}
+	saber_unlocked = true;
 
 
 }

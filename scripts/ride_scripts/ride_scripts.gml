@@ -277,7 +277,7 @@ function ride_check_punch() {
 /// @function		ride_check_leave()
 /// @description	Leave the Ride Armor/Chaser
 function ride_check_leave() {
-	if (((key_up && key_p_jump) || obj_player_parent.teleport_outro || obj_player_parent.wait_state == states.outro) && state != RIDE_ARMOR_STATE.ACTIVATED) {
+	if (key_up && key_p_jump && state != RIDE_ARMOR_STATE.ACTIVATED) {
 		state_set(RIDE_ARMOR_STATE.DEACTIVATING, 0, [is_on_floor()]);
 		with (char_instance) {
 			state_set(states.jump);	
@@ -445,7 +445,9 @@ if (deathtimer == 0){instance_create_depth(x,y,depth-1,explosion_set_box);instan
 /// @function		ride_eject()
 /// @description	Be forcefully ejected from the Ride Armor/Chaser
 function ride_eject() {
-	if (state != RIDE_ARMOR_STATE.ACTIVATED) {
+	//show_debug_message("eject?");
+	if (state != RIDE_ARMOR_STATE.ACTIVATED || (obj_player_parent.teleport_outro || obj_player_parent.wait_state == states.outro)) {
+		//show_debug_message("eject!");
 		state_set(RIDE_ARMOR_STATE.DEACTIVATING, 0, [is_on_floor()]);
 		with (char_instance) {
 			state_set(states.jump);	

@@ -1,8 +1,8 @@
 /// @description Add new animation
-/// @param {String} name
+/// @param {String} name name of the anim & sprite. can use "|" to specify the name of the sprite to use
 /// @param {Array} key_frames frames of the anim, grouped by two: first for anim frame and second for image index
-/// @param {Real} loop_start the frame to start on(?)
-/// @param {Real} loop_end the image index that ends anim(?)
+/// @param {Real} loop_start the frame where infinite anim loop starts
+/// @param {Real} loop_end the frame where infinite anim loop ends
 function animation_add() {
 
 	var _name = argument[0];

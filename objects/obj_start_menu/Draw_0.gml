@@ -133,7 +133,7 @@ switch(state) {
 			
 			if (_boss != noone) {
 				var info = global.boss_info[_boss];
-				draw_sprite(info[1], 0, pos[0], pos[1]);
+				draw_sprite(info[1], 0, pos[0], pos[1]); // Draw boss icon
 			}
 		}
 		draw_sprite(spr_stage_select, 0, 0, 0);
@@ -144,7 +144,7 @@ switch(state) {
 			if (_boss != noone) {
 				var info = global.boss_info[_boss];
 				if (sprite_exists(info[2])) {
-					draw_sprite(info[2], 0, 176, 85);
+					draw_sprite(info[2], 0, 176, 85); // Draw map if not sprite -1
 				}
 			}
 		}

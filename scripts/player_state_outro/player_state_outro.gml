@@ -1,5 +1,11 @@
 function player_state_outro() {
 	var t = state_timer++;
+	var _boss = 0;
+	for (i=0; i<array_length(global.boss_info); i++){
+		if (global.boss_info[i][3] == room) {
+			_boss = i; // find boss index of stage you just won
+		}
+	}
 	switch (substates[0]) {
 		case 0:
 			grav = 0;
@@ -41,7 +47,13 @@ function player_state_outro() {
 				global.player_lives = max(global.player_lives, 2);
 				room_goto(rm_start_menu);
 				global.start_menu_force_state = true;
-				global.start_menu_state = menu_states.stage_select;
+				if (boss_complete_music != "") { // get weapon from boss if defeated
+					global.start_menu_state = menu_states.weapon_get;
+					global.weapon_get_name = global.boss_info[_boss][5];
+					global.weapon_get_id = global.boss_info[_boss][6];
+				}
+				else
+					global.start_menu_state = menu_states.stage_select;
 				global.checkpoint = false;
 			}
 		break;

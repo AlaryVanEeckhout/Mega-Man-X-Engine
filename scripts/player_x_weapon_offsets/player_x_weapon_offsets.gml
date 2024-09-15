@@ -72,9 +72,9 @@ function player_x_weapon_offsets() {
 	player_weapon_offset("hover", 3, 23, -3);
 	player_weapon_offset("hover", 4, 25, -2);
 
-	player_weapon_offset("ceil_shot", 0, -5, 20);
-	player_weapon_offset("ceil_shot", 1, -5, 20);
-	player_weapon_offset("ceil_shot", 2, -5, 20);
+	player_weapon_offset("ceil_shot", 0, -5, -20);
+	player_weapon_offset("ceil_shot", 1, -5, -20);
+	player_weapon_offset("ceil_shot", 2, -5, -20);
 
 	player_weapon_offset("glide", 0, 21, -4);
 	player_weapon_offset("glide", 1, 21, -4);

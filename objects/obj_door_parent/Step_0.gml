@@ -51,7 +51,8 @@ switch(state) {
 					target.ride_char_pos.x += (_addx + 56 / 116) * dir; // make the char in ride follow ride properly
 				}
 			}
-			event_user(0); // Player animation
+			if target.state != states.ride
+				event_user(0); // Player animation
 		}
 		if (t >= open_limit) {
 			state_set(door_states.close);
@@ -98,7 +99,7 @@ switch(state) {
 						wait_state = states.outro;
 						if state == states.ride{
 							with ride_inst
-								ride_check_leave();
+								ride_eject();
 						}
 						substates[0] = -1;
 						wait_state_limit = 60;

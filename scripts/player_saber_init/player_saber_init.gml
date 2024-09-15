@@ -24,7 +24,7 @@ function player_saber_init() {
 	saber_atk_hspeed = 0;
 	saber_projectile_frame = 0;
 
-	saber_key = 1;
+	saber_key = 1; // 1: replaces normal attack; 2: sub weapon
 	saber_key_h = false;
 	saber_key_p = false;
 

@@ -3,6 +3,7 @@ event_inherited();
 // Scripts
 animation_script = player_megaman_animation;
 variables_script = player_megaman_variables;
+armor_script = player_megaman_armors;
 weapon_offsets_script = player_megaman_weapon_offsets;
 
 // Palette

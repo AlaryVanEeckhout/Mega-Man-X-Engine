@@ -34,9 +34,9 @@ function player_zero_variables() {
 	// Saber
 	saber_atk_unlocked[saber_atks.spinning_jump] = true;
 	saber_atk_unlocked[saber_atks.up] = true;
-	saber_atk_unlocked[saber_atks.down] = true;
-	saber_atk_unlocked[saber_atks.dash] = true;
-	saber_atk_unlocked[saber_atks.raikousen] = true;
+	saber_atk_unlocked[saber_atks.down] = false;
+	saber_atk_unlocked[saber_atks.dash] = false;
+	saber_atk_unlocked[saber_atks.raikousen] = false;
 
 	player_special_weapons_add(states.messenko);
 

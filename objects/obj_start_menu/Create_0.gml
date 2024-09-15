@@ -108,7 +108,7 @@ settings_apply();
 #region Player Select
 
 page_items[menu_states.player_select] = [
-	"X", "ZERO", "AXL", "IRIS", "VILE", "MEGAMAN"
+	"X", "ZERO", "AXL", "IRIS", "VILE", "MEGAMAN", "???"
 ];
 global.golden_armor_enabled = false;
 
@@ -184,7 +184,7 @@ weapon_get_props = {
 			y: 0,
 			interval: [0, 60]
 		},
-		new_weapon: weapons.homing_torpedo,
+		new_weapon: global.weapon_get_id,
 		wp_slot: 2,
 		visible: false,
 		palette_array: [0, 0, 0, 0, 0, 0],

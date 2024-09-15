@@ -16,15 +16,11 @@ function player_x_buster_x8_icarus(lvl = -1, t) {
 		break;
 		// Super-Charged shot
 		case 2:
-			player_shoot_projectile(obj_player_x_shot_op);
+			player_shoot_projectile(obj_player_x_shot_ult_super);
 			player_super_shoot_animation();
 		break;
 		// Icarus Lazer Shot
 		case 3:
-			player_shoot_projectile(obj_player_x_shot_x8_icarus);
-			with(obj_player_x_shot_x8_icarus){
-				lazer_section = "Middle";
-			}
 			player_shoot_projectile(obj_player_x_shot_x8_icarus);
 		break;
 	}

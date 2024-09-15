@@ -1,3 +1,5 @@
+///@param {Real} charge_level
+///@param {Real} shot_id
 function player_shoot() {
 	//shoot = true;
 	previous_charge_level = argument[0];

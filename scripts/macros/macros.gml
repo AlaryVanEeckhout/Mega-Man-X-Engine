@@ -28,9 +28,9 @@ function macros() {
 
 	#macro BAR_DEPTH -800
 	#macro G global
-	#macro PAUSE if (global.paused) exit;
-	#macro PAUSE_EXCEPT if (global.paused && !array_contains(pause_exceptions, global.pause_type)) exit;
-	#macro PAUSE_ONLY_NORMAL if (global.paused && global.pause_type == pause_types.normal) exit;
+	#macro PAUSE if (global.paused) exit
+	#macro PAUSE_EXCEPT if (global.paused && !array_contains(pause_exceptions, global.pause_type)) exit
+	#macro PAUSE_ONLY_NORMAL if (global.paused && global.pause_type == pause_types.normal) exit
 	
 	///Dialogue Engine
 	#macro font_big 0

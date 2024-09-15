@@ -104,7 +104,7 @@ function player_step() {
 			move = 1;
 		else if (dest_x < x)
 			move = -1;
-		if (abs(dest_x - x) < walk_speed) {
+		if (abs(dest_x - x) < 1) {
 			move = 0;
 			x = dest_x;
 			player_complete_outro();

@@ -31,6 +31,8 @@ function global_values() {
 	global.player_lives = 2;
 	global.items_count = 0;
 	global.difficulty = diff_modes.normal;
+	global.weapon_get_name = "NaW";
+	global.weapon_get_id = noone;
 	global.dash_lemon_visible = false;
 	global.unlocked_points = 0;
 	global.golden_armor_enabled = false;

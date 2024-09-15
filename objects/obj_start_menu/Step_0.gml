@@ -129,7 +129,8 @@ if (changed_state) {
 	changed_state = false;
 	switch(state) {
 		case menu_states.stage_select:
-			music_play("StageSelect");
+			if global.music_playing_name != "StageSelect"
+				music_play("StageSelect");
 			break;
 		case menu_states.voice_language:
 			var voice_languages = player_voice_languages_get();
@@ -213,10 +214,14 @@ switch (state) {
 			buttons[| i] = b;
 		}
 		
-		if (vinput_p == -1) {
+		if (vinput_p == -1) { // press up
 			menu_set_state(menu_states.armor_select);
 			tmp_armor = armor;
 			tmp_armor_index = armor_index;
+			break;
+		}
+		if (vinput_p == 1) {
+			menu_set_state(menu_states.stage_select);
 			break;
 		}
 		menu_update_item_h();
@@ -235,9 +240,8 @@ switch (state) {
 		if (point_in_rectangle(mouse_x, mouse_y, 160 - w, 0, 160 + w, global.view_width)
 		&& mouse_check_button_released(mb_left))
 			enter = true;
-		if (enter 
-		&& selected_item != pl_char.iris
-		&& selected_item != pl_char.vile) {
+		if (enter
+		&& selected_item < pl_char.length) {
 			var tran = transition_create(transition_types.blink);
 			tran.color = c_white;
 			tran.transition_limit = 16;
@@ -250,7 +254,6 @@ switch (state) {
 	#endregion
 	#region Armor Select
 	case menu_states.armor_select:
-		menu_player_select_sprites_load();
 		var c = G.character_selected_index[0];
 		if (substates[0] == 0) {
 			var t_dir = -1, next_item = -1;
@@ -290,7 +293,13 @@ switch (state) {
 						selected_item_next = c;
 						G.player_character_armor[c] = armor;
 						G.player_character_armor_index[c] = armor_index;
-						menu_set_state(menu_states.player_select);
+						var tran = transition_create(transition_types.blink);
+						tran.color = c_white;
+						tran.transition_limit = 16;
+						menu_set_state(menu_states.boss_intro, 16, 60);
+						music_stop(1000);
+						audio_play(snd_player_success);
+						global.character_selected[0] = global.character_object[global.character_selected_index[0]];
 						break;
 					case pl_btn.helmet:
 					case pl_btn.body:
@@ -307,6 +316,7 @@ switch (state) {
 				}
 			}
 		} else {
+			menu_player_select_sprites_load(); // Update armor asset if full
 			var b = buttons[| 0];
 			var pos = item_scroll_pos[selected_item];
 			var ww = sprite_get_width(sprite_scroll_arrows);
@@ -655,6 +665,7 @@ switch (state) {
 			weapon_get_props.player.y = lerp(move_from.y, move_to.y, amount);
 		}
 		else if (t == weapon_get_props.blink_limit) {
+			show_debug_message("blink limit");
 			var tran = transition_create(transition_types.fade_out_and_fade_in);
 			tran.color = c_white;
 			tran.transition_limit = 30;
@@ -662,6 +673,7 @@ switch (state) {
 			break;
 		}
 		else if (t == weapon_get_props.blink_limit + 15) {
+			show_debug_message("blink limit + 15");
 			background_index = 1;
 			var player_inst = instance_create_depth(64, -64, depth - 20, global.character_selected[0]);
 			weapon_get_props.instances[0] = player_inst;
@@ -672,6 +684,7 @@ switch (state) {
 				player_load_armor(true);
 				player_weapon_set(other.weapon_get_props.player.wp_slot, other.weapon_get_props.player.new_weapon);
 				weapon[0] = other.weapon_get_props.player.new_weapon;
+				weapon_script = weapons_script[weapon[0]];
 				plt_index = weapon_palettes[weapon[0]];
 				other.weapon_get_props.player.palette_swap = true;
 				if (!weapon_allow_pallete) {
@@ -686,10 +699,10 @@ switch (state) {
 			if (weapon_get_props.player.palette_swap == false) {
 				weapon_get_props.player.palette_sprite = noone;	
 			}
-			show_debug_message(weapon_get_props.player.palette_array);
+			//show_debug_message(weapon_get_props.player.palette_array);
 		}
 		else if (t == weapon_get_props.dark_limit) {
-			
+			show_debug_message("dark limit");
 			var tran = transition_create(transition_types.fade_out, depth - 1);
 			tran.transition_limit = 30;
 			tran.alpha_end = 0.5;
@@ -697,12 +710,14 @@ switch (state) {
 			weapon_get_props.instances[1] = tran; 
 		}
 		else if (t == weapon_get_props.dark_limit + 30) {
+			show_debug_message("dark limit + 30");
 			var inst = instance_create_depth(0, -72, depth - 10, obj_weapon_get_bar);
 			inst.interval = 30;
 			inst.move_to = { x: 0, y: 84 };
 			weapon_get_props.instances[2] = inst;
 		}
-		else if (t == weapon_get_props.dark_limit + 60) {
+		else if (t == weapon_get_props.dark_limit + 60) { // player teleports into view
+			show_debug_message("dark limit + 60");
 			var inst = instance_create_depth(0, 0, depth - 10, obj_weapon_get_text);
 			weapon_get_props.instances[3] = inst;
 			var block = instance_create_depth(0, obj_weapon_get_bar.y + 64, 0, obj_square_16);
@@ -717,9 +732,26 @@ switch (state) {
 			}
 		} else {
 			if (instance_exists(obj_player_parent)) {
-				if (obj_player_parent.weapon_demo_finished) {			
+				if (obj_player_parent.weapon_demo_finished) {		
+					obj_player_parent.state = states.outro;
 					menu_set_state(menu_states.stage_select, 16, 60);
 					wait_t = 60;
+				} else{
+					//show_debug_message(global.weapon_get_name + " : " + ("obj_player_" + weapon_get_props.instances[0].char_name + "_shot_" + string_lower(string_replace(global.weapon_get_name, " ", "_"))));
+					with weapon_get_props.instances[0]{
+						if state == states.idle && animation == "idle" && t mod 60 == 0 {
+							if t <= obj_start_menu.weapon_get_props.dark_limit + 240{
+								player_shoot(0);
+								show_debug_message("shoot 1");
+							}
+							else if charge_level_max > 3{
+								charge_level = 4;
+								player_shoot(3);
+								show_debug_message("shoot 2");
+							}
+							show_debug_message("done");
+						}
+					}
 				}
 			}
 		}

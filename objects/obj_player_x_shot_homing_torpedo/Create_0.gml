@@ -17,7 +17,7 @@ particle_xstart = 0;
 particle_ystart = 0;
 particle_depth = -1;
 
-sound = missileshot;
+sound = snd_missileshot;
 animation_add("D",
 [
 	0, 1,

@@ -68,6 +68,17 @@ function player_special_weapons_variables() {
 	dive_kick_count = 0;
 	
 	// Buster
+	xcm_buster_effect = player_effect_new(obj_player_zero_shot_x5_charge, 19, -6, layer_up);
+	xcm_buster_effect_inst = noone;
+	xcm_buster_object = obj_player_x_shot_xcm;
+	xcm_buster_charge_interval = 30;
+	xcm_buster_interval = 6;
+	xcm_buster_count = 0;
+	xcm_buster_limit = 4;
+	xcm_buster_function = function(inst, count) {
+		var dir_array = [1, 1, 0, -1, 0, 1, -1, 1];
+		inst.v_speed_dir = dir_array[count mod array_length(dir_array)];
+	}
 	z_buster_effect = player_effect_new(obj_player_zero_shot_x5_charge, 19, -6, layer_up);
 	z_buster_effect_inst = noone;
 	z_buster_object = obj_player_zero_shot_x5;

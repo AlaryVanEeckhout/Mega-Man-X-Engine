@@ -5,7 +5,6 @@ enum e_boss
 	hq,
 	chill_penguin,
 	storm_eagle,
-	
 	flame_stag,
 	magma_dragoon,
 	neon_tiger,
@@ -35,23 +34,23 @@ function bosses_init() {
 	//["", -1, -1, rm_intro_stage, -1];
 
 	global.boss_info[e_boss.chill_penguin] = 
-	["CHILL PENGUIN", spr_chill_penguin_icon, spr_stage_snow_mountain, rm_chill_penguin, obj_chill_penguin_intro];
+	["CHILL PENGUIN", spr_chill_penguin_icon, spr_stage_snow_mountain, rm_chill_penguin, obj_chill_penguin_intro, "Shotgun Ice", weapons.x_buster];
 
 	global.boss_info[e_boss.storm_eagle] = 
-	["STORM EAGLE", spr_storm_eagle_icon, spr_7th_airborne_unit, rm_test_stage_2, obj_storm_eagle_intro];
+	["STORM EAGLE", spr_storm_eagle_icon, spr_stage_7th_airborne_unit, rm_test_stage_2, obj_storm_eagle_intro, "Storm Tornado", weapons.storm_tornado];
 
 	global.boss_info[e_boss.flame_stag] = 
-	["WAIT YOU ARE NOT FLAME STAG", spr_flame_stag_icon, spr_stage_snow_mountain, rm_test_stage, obj_chill_penguin_intro];
+	["WAIT YOU ARE NOT FLAME STAG", spr_flame_stag_icon, spr_stage_flame_stag, rm_test_stage, obj_chill_penguin_intro, "Flame stuff", weapons.dive_missile];
 
 	global.boss_info[e_boss.neon_tiger] = 
-	["NEON TIGER", spr_neon_tiger_icon, -1, rm_test_slopes, obj_magma_dragoon];
+	["NEON TIGER", spr_neon_tiger_icon, spr_stage_neon_tiger, rm_test_slopes, obj_magma_dragoon, "Rapid shot", weapons.a_pistol];
 
 	global.boss_info[e_boss.magma_dragoon] = 
-	["MAGMA DRAGOON", spr_magma_dragoon_icon, -1, rm_magma_dragoon, obj_magma_dragoon_intro];
+	["MAGMA DRAGOON", spr_magma_dragoon_icon, spr_stage_volcano, rm_magma_dragoon, obj_magma_dragoon_intro, "Magma Saber or somethin'", weapons.a_ray_gun];
 	//["MAGMA DRAGOON", spr_magma_dragoon_icon, -1, -1, obj_magma_dragoon_intro];
 	
 	global.boss_info[e_boss.launch_octopus] = 
-	["LAUNCH OCTOPUS", spr_launch_octopus_icon, spr_launch_octopus_map, rm_launch_octopus, obj_launch_octopus_intro];
+	["LAUNCH OCTOPUS", spr_launch_octopus_icon, spr_launch_octopus_map, rm_launch_octopus, obj_launch_octopus_intro, "Homing Torpedo", weapons.homing_torpedo];
 #endregion
 #region Stage Select Bosses
 	global.boss_slot[0] = e_boss.chill_penguin;

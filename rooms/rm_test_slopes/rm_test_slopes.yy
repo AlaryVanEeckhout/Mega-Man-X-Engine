@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "rm_test_slopes",
-  "creationCodeFile": "${project_dir}/rooms/rm_test_slopes/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/rm_test_slopes/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

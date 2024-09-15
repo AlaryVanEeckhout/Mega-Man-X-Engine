@@ -9,7 +9,7 @@ shot_counted = true;
 destroy_reset_speed = false;
 abs_speed = 6;
 weapon_death_type = weapon_death_types.saber;
-sound = snd_player_zero_saber_2;
+sound = snd_player_zero_saber_3d_2;
 animation_add("L", [
 	0, 0,
 	1, 1,

@@ -7,7 +7,7 @@ function player_iris_variables() {
 
 	// Saber Settings
 	saber_unlocked = true;
-	saber_key = 2;
+	saber_key = 2; // key is now sub weapon instead of main weapon
 
 	// Outro
 	teleport_outro_reset_weapon = false;

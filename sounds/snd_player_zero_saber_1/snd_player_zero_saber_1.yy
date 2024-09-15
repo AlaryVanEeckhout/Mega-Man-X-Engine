@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.572698,
   "parent": {
     "name": "Saber",
     "path": "folders/Sounds/Player/Characters/Zero/Saber.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "snd_player_zero_saber_1",
+  "soundFile": "snd_player_zero_saber_1.wav",
   "type": 1,
-  "volume": 0.8,
+  "volume": 1.0,
 }

@@ -1,4 +1,4 @@
-function player_saber_key_check() {
+function player_saber_key_check() { // h = held, p = pressed
 	if (saber_key == 1) {
 		saber_key_h = key_shoot;
 		saber_key_p = key_p_shoot;

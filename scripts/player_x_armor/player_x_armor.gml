@@ -198,13 +198,17 @@ function player_x_armor() {
 			weapons_script[weapons.x_buster] = player_x_buster_shadow;
 			// Saber
 			saber_unlocked = true;
+			saber_atk_unlocked[saber_atks.atk1] = true;
 			saber_atk_unlocked[saber_atks.atk2] = false;
 			saber_atk_unlocked[saber_atks.atk3] = false;
 			//saber_atk_unlocked[saber_atks.jump] = false;
 			saber_atk_unlocked[saber_atks.wall] = false;
-			saber_atk_animations[saber_atks.atk1] = "atk3";
-			saber_key = 2;
+			saber_atk_animations[saber_atks.atk1] = "saber";
+			saber_atk_animations[saber_atks.jump] = "saber_air";
+			saber_key = 2; // special button
 			player_activate_immunity(immunity_types.spike);
+			player_weapon_set(1, noone);
+			player_weapon_set(2, noone);
 			weapon_allow_pallete = false;
 		}
 	#endregion

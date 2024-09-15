@@ -1,10 +1,16 @@
 function player_zero_armors() {
 	// Default
+	saber_atk_animations[saber_atks.up] = "atk_ryuenjin";
 	plt_index_default = 0;
 
 	if (FULL == "black") {
 		plt_index_default = 1;
 		saber.plt_index = saber_color.purple;
+		saber_atk_unlocked[saber_atks.spinning_jump] = true;
+		saber_atk_animations[saber_atks.up] = "atk_denjin";
+		saber_atk_unlocked[saber_atks.down] = true;
+		saber_atk_unlocked[saber_atks.dash] = true;
+		saber_atk_unlocked[saber_atks.raikousen] = true;
 		damage_reduction = 0.5;
 		for (var i = 0, len = array_length(saber_damage); i < len; i++) {
 			saber_damage[i] *= 1.25;
@@ -45,6 +51,7 @@ function player_zero_armors() {
 
 }
 function player_zero_armor_nightmare() {
+	weapon[2] = weapons.z_buster_nightmare;
 	ds_list_clear(special_weapons);
 	player_special_weapons_add(states.shin_messenko);
 	plt_index_default = 2;
@@ -55,10 +62,24 @@ function player_zero_armor_nightmare() {
 	charge_unlocked = true;
 	weapon_allow_pallete = false;
 	z_buster_effect.object = obj_player_zero_shot_nightmare_charge;
+	dolor_animation = "dolor2";
 	player_weapon_set(0, weapons.nightmare_saber);
 	player_weapon_select(weapons.nightmare_saber);
-	player_special_weapons_add(states.teleport_dash);		
+	player_special_weapons_add(states.teleport_dash);	
+	saber_atk_animations[saber_atks.atk1] = "atk_nightmare";
+	saber_atk_unlocked[saber_atks.atk2] = false;
+	saber_atk_unlocked[saber_atks.atk3] = false;
+	saber_atk_unlocked[saber_atks.spinning_jump] = false;
+	saber_atk_unlocked[saber_atks.dash] = false;
 	saber_atk_unlocked[saber_atks.raikousen] = false;
+	saber_atk_sounds[saber_atks.atk1]           = snd_player_zero_saber_3d_1;
+	saber_atk_sounds[saber_atks.atk2]           = snd_player_zero_saber_3d_1;
+	saber_atk_sounds[saber_atks.atk3]           = snd_player_zero_saber_3d_2;
+	saber_atk_sounds[saber_atks.jump]           = snd_player_zero_saber_3d_1;
+	saber_atk_sounds[saber_atks.wall]           = snd_player_zero_saber_3d_1;
+	saber_atk_sounds[saber_atks.spinning_jump]  = snd_player_zero_saber_3d_2;
+	saber_atk_sounds[saber_atks.dash]           = snd_player_zero_saber_3d_1;
+	saber_atk_sounds[saber_atks.charged_saber]  = snd_player_zero_saber_3d_2;
 	charge_limits[3] = charge_limits[2];
 	charge_level_max = 3;
 	for (var i = 0, len = array_length(saber_damage); i < len; i++) {

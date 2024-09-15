@@ -2,7 +2,7 @@ event_inherited();
 
 // Scripts
 variables_script = player_axl_variables;
-animation_script = player_axl_animations;
+animation_script = player_axl_animation;
 armor_script = player_axl_armors;
 weapon_offsets_script = player_axl_weapon_offsets;
 

@@ -148,6 +148,24 @@ function player_zero_animations() {
 		16, 11,
 		19, 11
 	]);
+	
+	animation_add("atk_nightmare|atk_3",
+	[
+		0, 0,
+		1, 1,
+		31, 2,
+		32, 3,
+		33, 4,
+		35, 5,
+		36, 6,
+		37, 7,
+		38, 8,
+		40, 9,
+		41, 10,
+		45, 11,
+		48, 12,
+		50, 13
+	]);
 
 	animation_add("atk_3_end|atk_3",
 	[
@@ -231,6 +249,35 @@ function player_zero_animations() {
 		13, 7,
 		15, 8,
 		16, 8
+	]);
+	
+	animation_add("atk_denjin|atk_denjin",
+	[
+		0, 0,
+		1, 1,
+		2, 2,
+		3, 3,
+
+		4, 4,
+		6, 5,
+		8, 6,
+		10, 4,
+		12, 5,
+		14, 6,
+		16, 4,
+		18, 5,
+		20, 6,
+		22, 4,
+		24, 5,
+		26, 6,
+		27, 6
+	], 4, 27);
+	
+	animation_add("atk_denjin_end|atk_denjin",
+	[
+		0, 7,
+		3, 8,
+		4, 8
 	]);
 
 	animation_add("atk_ryuenjin",
@@ -370,14 +417,11 @@ function player_zero_animations() {
 	
 	animation_add("shin_messenko", animations_frames[? "messenko"]);
 
-	animation_add("buster", [
-		0, 0,
-		20, 1,
-		25, 2,
-		30, 3,
-		35, 4,
-		40, 5,
-		44, 5
+	animation_add("buster_nightmare|buster", [
+		0, 1,
+		5, 2,
+		10, 3,
+		38, 3
 	]);
 	
 	animation_add("buster_charge|buster", [

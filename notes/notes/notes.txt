@@ -33,3 +33,10 @@ Go to script Player/Base/Create/player_states
 
 How to mod states?
 Go to script Player/Base/Step/States/[Normal or Special] States/player_state_[name]
+
+How to Add new stages?
+Go to script Bosses/bosses_init and you can see what rooms are associated to each stage slot
+
+How to add new characters/make them selectable?
+Go to opject Start Menu/obj_start_menu and open the Create script
+There, you can change how the character select screen handles each character

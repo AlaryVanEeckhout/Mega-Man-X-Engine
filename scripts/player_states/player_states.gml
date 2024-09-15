@@ -36,6 +36,7 @@ function player_states() {
 		tatsumaki,
 		nova_strike,
 		giga_falcon,
+		x_buster_cm,
 		shin_messenko,
 		messenko,
 		speed_gear,
@@ -114,7 +115,8 @@ function player_states() {
 	state_array[states.shoryuken]		= player_state_shoryuken;
 	state_array[states.tatsumaki]		= player_state_tatsumaki;
 	state_array[states.giga_falcon]		= player_state_giga_falcon;
-	state_array[states.teleport_dash]		= player_state_teleport_dash;
+	state_array[states.x_buster_cm]		= player_state_x_buster_cm;
+	state_array[states.teleport_dash]	= player_state_teleport_dash;
 	state_array[states.messenko]		= player_state_messenko;
 	state_array[states.shin_messenko]	= player_state_shin_messenko;
 	state_array[states.dive_kick]		= player_state_dive_kick;

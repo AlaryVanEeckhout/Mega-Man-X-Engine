@@ -15,11 +15,8 @@ function player_zero_buster_x5(lvl = -1, t = 0) {
 		// Normal shot
 		case 0:
 			player_state_set(states.z_buster_x5);
-		break;
-		// Super-Charged shot
 		case 2: 
 		case 3:
-			player_state_set(states.z_buster_nightmare);
 		break;
 	}
 
